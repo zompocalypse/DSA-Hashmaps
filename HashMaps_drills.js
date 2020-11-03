@@ -121,7 +121,7 @@ function isPalindrome(str) {
 // 6. Anagram grouping
 
 function anagramGrouping(strings) {
-  let anagramGroup = new HashMap();
+  let anagramGroup = {};
   strings.forEach((string) => {
     let letters = string.split('').sort();
     if (anagramGroup[letters]) {
@@ -137,4 +137,4 @@ function anagramGrouping(strings) {
   return anagramGroup;
 }
 let tester = ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'];
-console.log(anagramGrouping(tester));
+anagramGrouping(tester);
